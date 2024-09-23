@@ -1,0 +1,15 @@
+# Ignore .vscode folders
+general-question/.vscode/
+pattern-printing/.vscode/
+
+# Ignore specific file extensions
+general-question/*.exe
+general-question/*.txt
+pattern-printing/*.exe
+pattern-printing/*.txt
+
+# Ignore specific temp files
+general-question/tempCodeRunnerFile.cpp
+general-question/tempCodeRunnerFile.c
+pattern-printing/tempCodeRunnerFile.cpp
+pattern-printing/tempCodeRunnerFile.c
