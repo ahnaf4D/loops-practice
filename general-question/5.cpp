@@ -1,6 +1,6 @@
 /**************************************************
  *                                                *
- *          All praise to Allah (SWT)             *
+ *                     *
  *                                                *
  *            Author : Ahnaf Tahmid               *
  *            Date   : 23/09/2024                 *
@@ -9,43 +9,54 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-bool isPrime(int n, int sqr)
+bool isPrime(int n)
 {
-    bool isPrimeN;
-    for (int i = 2; i <= sqr; ++i)
+    for (int i = 5; i * i <= n; i += 6)
     {
-        if (n % i != 0)
+        if (n % i == 0 || n % (i + 2) == 0)
         {
-            isPrimeN = true;
-        }
-        else
-        {
-            isPrimeN = false;
+            return false;
         }
     }
-    return isPrimeN;
+    return true;
 }
-int main()
+void solve()
 {
-
     int N;
     cin >> N;
     if (N <= 1)
     {
         cout << "not a prime" << endl;
     }
+    else if (N == 2 || N == 3)
+    {
+        cout << "prime" << endl;
+    }
+    else if (N % 2 == 0 || N % 3 == 0)
+    {
+        cout << "not a prime" << endl;
+    }
     else
     {
-        int sqrtVal = sqrt(N);
-        bool isPrimeNum = isPrime(N, sqrtVal);
-        if (isPrimeNum)
+        if (isPrime(N))
         {
             cout << "prime" << endl;
         }
         else
         {
-            cout << "not a prime number" << endl;
+            cout << "not a prime" << endl;
         }
     }
+}
+
+int main()
+{
+
+    // int T;
+    // cin >> T;
+    // while (T--)
+    // {
+    solve();
+    // }
     return 0;
 }
