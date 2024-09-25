@@ -4,4 +4,4 @@
 - Reverse order loops
 - Prime Number Problems
 # Recap Needed
-- [General Loops]()
+- [General Loops](https://ahnaf4d.github.io/loops-practice/weakness-problems/general_loops.html)
