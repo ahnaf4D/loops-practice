@@ -1,6 +1,7 @@
 #include <iostream>
 #define endl "\n"
 using namespace std;
+//  Euclid's Algorithm for GCD
 int GCD(int a, int b)
 {
     while (a % b != 0)
